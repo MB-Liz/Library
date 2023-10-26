@@ -1,0 +1,61 @@
+body{
+  margin: 0;
+}
+
+header{
+  position: sticky;
+  background: #efb7b7;
+  padding: 5px 50px;
+  margin: 0;
+}
+
+.book-form{
+  position: absolute;
+  background: #9ca2a5a4;
+  width: 400px;
+  height: 600px;
+  padding: 20px;
+  border: 1px solid;
+}
+
+.book-form .form-title-text h1{
+  margin: 20px 0 0px;
+}
+
+.book-form .form-title-text h4{
+  margin: 5px 0;
+}
+
+.book-form .input_container{
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+  margin: 20px 5px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.book-form input,
+.book-form select{
+  height: 25px;
+  padding: 5px;
+  font-size: 1.4rem;
+  background: #e8ece5;
+}
+
+.book-form select{
+  width: 100%;
+  height: 100%;
+}
+
+.book-form .button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.book-form button{
+  width: 90%;
+  padding: 8px;
+  margin: 40px 0;
+  font-size: 1.4rem;
+}
