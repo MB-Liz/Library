@@ -20,6 +20,7 @@ header{
 
 .book-form .form-title-text h1{
   margin: 20px 0 0px;
+  border: 0 0 1px solid;
 }
 
 .book-form .form-title-text h4{
@@ -59,3 +60,134 @@ header{
   margin: 40px 0;
   font-size: 1.4rem;
 }
+
+.book-progress-form{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  background: #9ca2a5cb;
+  width: 300px;
+  height: 150px;
+  padding: 35px 50px;
+  border: 1px solid;
+}
+
+.book-progress-form .book-progress{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.book-progress-form label{
+  margin: 0px 10px;
+}
+
+.book-progress-form input{
+  height: 25px;
+  padding: 5px;
+  font-size: 1.4rem;
+  background: #e8ece5;
+}
+
+.book-progress-form .button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.book-progress-form button{
+  width: 90%;
+  padding: 8px;
+  margin: 30px 0;
+  font-size: 1.2rem;
+}
+
+.book-card-container{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 300px));
+  gap: 50px;
+  padding: 30px;
+}
+
+.book-card{
+  display: grid;
+  border: 2px solid;
+  border-radius: 15px;
+  height: 320px;
+  padding: 20px 20px 30px;
+  background: #ebfde6;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas: 
+  "title title title title title title title title"
+  "title title title title title title title title"
+  "author author author author author author author author"
+  ". . . . pages pages pages pages"
+  ". status status status . . pages-text pages-text"
+  ". . . . . . . ."
+  "status-button status-button status-button status-button delete delete delete delete";
+}
+
+.book-card .book-card-title{
+  grid-area: title;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(185, 161, 185);
+  border-bottom: 1px solid;
+}
+
+.book-card .book-card-author{
+  grid-area: author;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  padding: 5px;
+}
+
+.book-card .book-card-total-pages{
+  grid-area: pages;
+  font-size: 1.2rem;
+  text-align: center;
+  border-left: 1px solid;
+  padding: 10px;
+}
+
+.book-card .book-card-pages-text{
+  grid-area: pages-text;
+  /* border: 1px dashed; */
+  text-align: right;
+  padding: 0 10px;
+}
+
+.book-card .book-card-status{
+  grid-area: status;
+  font-size: 1.05rem;
+  text-shadow: 0.5px 0.4px rgb(185, 161, 185);
+  text-align: center;
+  /* border: 1px dashed; */
+  padding: 22px 0px 0 0px;
+}
+
+.book-card .book-card-status-button{
+  grid-area: status-button;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.book-card .delete-button{
+  grid-area: delete;
+  background: rgba(241, 97, 97, 0.85);
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid;
+  border-radius: 15px;
+}
+
+
+/* .book-card-container{} */

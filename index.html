@@ -17,22 +17,23 @@
       <h1>Book Form</h1>
       <h4>Add a new book</h4>
     </div>
-    <form action="" method="post">
+    <!-- action="https://" -->
+    <form  method="post">
       <div class="book-title input_container">
         <label for="title">Title</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" required>
       </div>
       <div class="book-author input_container">
         <label for="author">Author</label>
-        <input type="text" name="author" id="author">
+        <input type="text" name="author" id="author" required>
       </div>
       <div class="book-pages input_container">
         <label for="pages">Total Pages</label>
-        <input type="number" name="pages" id="pages">
+        <input type="number" name="pages" id="pages" min="0" required>
       </div>
       <div class="book-status input_container">
         <label for="status">Book Status</label>
-        <select name="status" id="status">
+        <select name="status" id="status" required>
             <option value="unread">Unread</option>
             <option value="in_progress">In progress</option>
             <option value="completed">Completed</option>
@@ -43,12 +44,36 @@
       </div>
     </form>
   </div>
+  <div class="book-progress-form" style="visibility: visible;">
+    <form method="post">
+      <div class="book-progress input-container">
+        <label for="progress">Book Progress</label>
+        <input type="number" name="progress" id="progress" required>
+      </div>
+      <div class="button-container">
+        <button type="button" id="add-book-button">Add Book Progress</button>
+      </div>
+    </form>
+  </div>
   <main>
     <div class="text-desc">
       List of books
     </div>
+    <div class="book-card-container">
+      <div class="book-card">
+        <div class="book-card-title">Apple in Juice in white reter</div>
+        <div class="book-card-author">by Mary Amy</div>
+        <div class="book-card-total-pages">325</div>
+        <div class="book-card-pages-text">pages</div>
+        <div class="book-card-status">Completed</div>
+        <div class="book-card-status-button">Completed</div>
+        <div class="delete-button">Delete</div>
+      </div>
+    </div>
   </main>
-  <footer></footer>
+  <footer>
+
+  </footer>
 </body>
 <script src="script.js"></script>
 </html>
